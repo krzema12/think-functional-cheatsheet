@@ -3,11 +3,8 @@ doctype
 
 html
   head
-    title "Swift is like Go"
+    title "Think functional - cheatsheet"
     meta (:charset utf-8)
-    link (:rel icon)
-      :href http://logo.cirru.org/cirru-32x32.png
-      :type image/png
     link (:rel stylesheet)
       :href https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css
     style (@insert css/style.css)

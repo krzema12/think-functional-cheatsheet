@@ -1,14 +1,14 @@
 {
-  "name": "swift-is-like-go",
-  "version": "0.0.2",
-  "description": "Swift is like Go ------",
+  "name": "think-functional-cheatsheet",
+  "version": "0.0.1",
+  "description": "Think functional - cheatsheet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "coffee tasks/render.coffee",
     "up": "bash tasks/rsync.sh"
   },
-  "author": "jiyinyiyong",
+  "author": "krzema12",
   "license": "MIT",
   "devDependencies": {
     "cirru-html": "^0.2.2",
@@ -17,14 +17,15 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/jiyinyiyong/swift-is-like-go.git"
+    "url": "https://github.com/krzema12/think-functional-cheatsheet.git"
   },
   "keywords": [
-    "swift",
-    "golang"
+    "functional",
+    "cheatsheet",
+    "kotlin"
   ],
   "bugs": {
-    "url": "https://github.com/jiyinyiyong/swift-is-like-go/issues"
+    "url": "https://github.com/krzema12/think-functional-cheatsheet/issues"
   },
-  "homepage": "https://github.com/jiyinyiyong/swift-is-like-go"
+  "homepage": "https://github.com/krzema12/think-functional-cheatsheet"
 }
