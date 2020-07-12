@@ -17,12 +17,6 @@ html
     a (:target _blank)
       :href https://github.com/krzema12/think-functional-cheatsheet
       img#fork-me (:src https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149)
-    #note
-      = "Fork the repo if you want to help improve it. :)"
-      br
-      = "You may also check "
-      a (:href http://hyperpolyglot.org/c) (:target _blank)
-        = "Hyperpolyglot C, Go, Swift: a side-by-side reference sheet"
     .section
       .title BASICS
       .case (.name "No mutable variables") $ .pair

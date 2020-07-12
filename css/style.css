@@ -13,7 +13,7 @@ body * {
     padding: 80px;
 }
 
-.section:nth-child(2n) {
+.section:nth-child(2n+1) {
     background-color: white;
 }
 
@@ -68,23 +68,13 @@ body * {
     padding: 0.5em;
     overflow-x: auto;
 }
-.section:nth-child(2n) .code {
+.section:nth-child(2n+1) .code {
     background-color: #eee;
 }
 
 #fork-me {
     position: absolute;
     right: 0;
-}
-
-#note {
-    font-size: 24px;
-    color: #A7A7A7;
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(221, 221, 221);
-    font-weight: 100;
-    line-height: 2em;
 }
 
 .hljs {
