@@ -12,6 +12,7 @@ html
       :href https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css
     style (@insert css/style.css)
     script (:src https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js)
+    script (:src https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/kotlin.min.js)
     script (:src https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js)
     script (:src https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js)
     script (:defer true) "hljs.initHighlightingOnLoad();"
@@ -27,6 +28,9 @@ html
         = "Hyperpolyglot C, Go, Swift: a side-by-side reference sheet"
     .section
       .title BASICS
+      .case (.name "No mutable variables") $ .pair
+        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-before.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin  (@insert code/no-mutable-variables-after.kt)
       .case (.name "Hello World") $ .pair
         .card (.lang Swift) $ pre.code $ code.swift (@insert code/hello-world.swift)
         .card (.lang Go   ) $ pre.code $ code.go    (@insert code/hello-world.go)

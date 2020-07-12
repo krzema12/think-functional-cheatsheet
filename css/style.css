@@ -53,7 +53,7 @@ body * {
     margin: 0 10px;
 }
 
-.lang {
+.beforeOrAfter, .lang {
     font-size: 22px;
     color: #666;
     font-weight: 100;
