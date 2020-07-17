@@ -1,0 +1,3 @@
+fun someFunction() = someWrapperFunction(someParameter = 123) {
+    // ...
+}

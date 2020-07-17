@@ -19,4 +19,16 @@ html
       .title BASICS
       .case (.name "No mutable variables") $ .pair
         .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin  (@insert code/no-mutable-variables-after.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-after.kt)
+      .case (.name "No mutable class fields") $ .pair
+        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-before.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-after.kt)
+      .case (.name "Immutable platform types") $ .pair
+        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-before.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-after.kt)
+      .case (.name "Collection extension functions instead of loops") $ .pair
+        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-loops-before.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-loops-after.kt)
+      .case (.name "Higher-order functions instead of annotations") $ .pair
+        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-annotations-before.kt)
+        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-annotations-after.kt)
