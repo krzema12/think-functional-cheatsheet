@@ -53,13 +53,12 @@ body * {
     margin: 0 10px;
 }
 
-.beforeOrAfter {
+.noYes {
     font-size: 22px;
     color: #666;
     font-weight: 100;
     letter-spacing: 2px;
 }
-
 
 .code {
     background-color: white;

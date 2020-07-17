@@ -18,17 +18,17 @@ html
     .section
       .title BASICS
       .case (.name "No mutable variables") $ .pair
-        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-after.kt)
+        .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-no.kt)
+        .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-yes.kt)
       .case (.name "No mutable class fields") $ .pair
-        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-after.kt)
+        .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-no.kt)
+        .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/no-mutable-class-fields-yes.kt)
       .case (.name "Immutable platform types") $ .pair
-        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-after.kt)
+        .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-no.kt)
+        .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/immutable-platform-types-yes.kt)
       .case (.name "Collection extension functions instead of loops") $ .pair
-        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-loops-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-loops-after.kt)
+        .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/no-loops-no.kt)
+        .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/no-loops-yes.kt)
       .case (.name "Higher-order functions instead of annotations") $ .pair
-        .card (.beforeOrAfter Before) $ pre.code $ code.kotlin (@insert code/no-annotations-before.kt)
-        .card (.beforeOrAfter After ) $ pre.code $ code.kotlin (@insert code/no-annotations-after.kt)
+        .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/no-annotations-no.kt)
+        .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/no-annotations-yes.kt)
