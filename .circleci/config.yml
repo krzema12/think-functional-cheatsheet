@@ -3,6 +3,8 @@ orbs:
   node: circleci/node@3.0.1
 jobs:
   deploy:
+    executor:
+      name: node/default
     steps:
       - checkout
       - run: yarn
