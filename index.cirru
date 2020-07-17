@@ -15,8 +15,7 @@ html
     a (:target _blank)
       :href https://github.com/krzema12/think-functional-cheatsheet
       img#fork-me (:src https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149)
-    .section
-      .title BASICS
+    #cases
       .case (.name "No mutable variables") $ .pair
         .card (.noYes No ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-no.kt)
         .card (.noYes Yes ) $ pre.code $ code.kotlin (@insert code/no-mutable-variables-yes.kt)
