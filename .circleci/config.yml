@@ -33,6 +33,7 @@ jobs:
             cp -av build gh-pages
             cp .circleci/config-github-pages.yml gh-pages/.circleci/config.yml
             cd gh-pages
+            mv build/* .
 
             git add -A
             git commit -m "Circle CI deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
