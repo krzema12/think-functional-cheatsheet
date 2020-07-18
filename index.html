@@ -1,0 +1,119 @@
+<!DOCTYPE html><html><head><title>Think functional - cheatsheet</title><meta charset="utf-8"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css"><style>
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#cases {
+    background-color: #eee;
+}
+
+.case {
+    padding: 80px 0;
+}
+
+.case:nth-child(2n+1) {
+    background-color: white;
+}
+
+.name {
+    font-size: 32px;
+    color: #444;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pair {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+}
+
+.card {
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    max-width: 590px;
+    margin: 0 10px;
+}
+
+.noYes {
+    font-size: 22px;
+    color: #666;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.code {
+    background-color: white;
+    color: #444;
+    font-family: Menlo, monospace;
+    padding: 0.5em;
+    overflow-x: auto;
+}
+.case:nth-child(2n+1) .code {
+    background-color: #eee;
+}
+
+#fork-me {
+    position: absolute;
+    right: 0;
+}
+
+.hljs {
+    background-color: transparent;
+}</style><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/kotlin.min.js"></script><script defer="true">hljs.initHighlightingOnLoad();</script></head><body><a target="_blank" href="https://github.com/krzema12/think-functional-cheatsheet"><img id="fork-me" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149"></a><div id="cases"><div class="case"><div class="name">No mutable variables</div><div class="pair"><div class="card"><div class="noYes">No</div><pre class="code"><code class="kotlin">var someVariable = "default value"
+
+if (someCondition) {
+    someVariable = "another value"
+}</code></pre></div><div class="card"><div class="noYes">Yes</div><pre class="code"><code class="kotlin">val someVariable = if (someCondition) {
+    "another value"
+} else {
+    "default value"
+}</code></pre></div></div></div><div class="case"><div class="name">No mutable class fields</div><div class="pair"><div class="card"><div class="noYes">No</div><pre class="code"><code class="kotlin">data class SomeClass(
+    var someField: String)
+
+val someObject = SomeClass(someField = "foo")
+someObject.someField = "bar</code></pre></div><div class="card"><div class="noYes">Yes</div><pre class="code"><code class="kotlin">data class SomeClass(
+    val someField: String)
+
+val someObject = SomeClass(someField = "foo")
+val someObject2 = someObject.copy(someField = "bar")</code></pre></div></div></div><div class="case"><div class="name">Immutable platform types</div><div class="pair"><div class="card"><div class="noYes">No</div><pre class="code"><code class="kotlin">import java.util.Calendar
+import java.util.Date
+import java.util.GregorianCalendar
+import java.net.URL
+
+val someDate: Date = GregorianCalendar(2012, Calendar.DECEMBER, 4).time
+
+val someUrl = URL("https://github.com")</code></pre></div><div class="card"><div class="noYes">Yes</div><pre class="code"><code class="kotlin">import java.time.LocalDate
+import java.time.Month
+import java.net.URI
+
+
+val someDate: LocalDate = LocalDate.of(2012, Month.DECEMBER, 4)
+
+val someUri = URI("https://github.com")</code></pre></div></div></div><div class="case"><div class="name">Collection extension functions instead of loops</div><div class="pair"><div class="card"><div class="noYes">No</div><pre class="code"><code class="kotlin">val names = listOf("Alice", "Bob", "Cedric")
+val lengths = mutableListOf<Int>()
+
+for (name in names) {
+    if (name.length > 3) {
+        lengths.add(name.length)
+    }
+}</code></pre></div><div class="card"><div class="noYes">Yes</div><pre class="code"><code class="kotlin">val names = listOf("Alice", "Bob", "Cedric")
+val lengths = names
+    .map { it.length }
+    .filter { it > 3 }</code></pre></div></div></div><div class="case"><div class="name">Higher-order functions instead of annotations</div><div class="pair"><div class="card"><div class="noYes">No</div><pre class="code"><code class="kotlin">@SomeAnnotation(someParameter = 123)
+fun someFunction() {
+    // ...
+}</code></pre></div><div class="card"><div class="noYes">Yes</div><pre class="code"><code class="kotlin">fun someFunction() = someWrapperFunction(someParameter = 123) {
+    // ...
+}</code></pre></div></div></div></div></body></html>
