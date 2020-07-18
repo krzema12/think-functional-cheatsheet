@@ -4,6 +4,8 @@ Think functional - cheatsheet
 
 A bunch of quick tips how to make your code more functional.
 
+[Click here](https://krzema12.github.io/think-functional-cheatsheet/) to open the page.
+
 ### Develop
 
 ```bash
